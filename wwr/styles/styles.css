@@ -7,8 +7,8 @@
   --secondary-color: #0b6e4f;
   --accent1-color: #08a045;
   --accent2-color: white;
-  --footer-brown: #3b2f2f;  /* Brownish color for footer */
-  --footer-green: #0b6e4f;   /* Green for footer bottom */
+  --footer-brown: #3b2f2f;  
+  --footer-green: #0b6e4f;   
 
   /* Fonts */
   --heading-font: "Rock Salt", cursive;
@@ -28,33 +28,36 @@
 
 /* General Styles */
 body {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 4em;
-  font-size: 18px;
-  text-align: center;
+  background-color: #fcfbfb;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 22px; 
+  margin: 0;
+  padding: 0;
 }
 
-/* Header */
+
+/* HEADER */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: var(--paragraph-background-color);
-  padding: 1em;
+  padding: 10px 20px;
 }
 
-/* LOGO Positioning */
+/* LOGO ALIGNMENT */
 #logo_link {
   display: flex;
   align-items: center;
-  margin-left: 20px;  /* Moves logo to the left */
+  justify-content: flex-start;
+  margin-left: 15px;
 }
 
 .logo {
-  width: 60px; /* Smaller logo */
+  width: 70px; 
   height: auto;
 }
+
 
 /* Navigation */
 nav {
@@ -96,10 +99,13 @@ nav a:hover {
 
 #hero-msg {
   position: absolute;
-  top: 25%;
+  top: 30%;
   width: 100%;
   text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
 
 #hero-msg h1 {
   font-size: 2.5em;
@@ -130,12 +136,11 @@ nav a:hover {
 }
 
 /* Home Grid */
-.home-grid {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: 40px 0;
+.home-title, .msg h2 {
+  font-family: "Rock Salt", "Bradley Hand", sans-serif;
+  font-size: 2em;
 }
+
 
 .rivers-card, .camping-card, .rapids-card {
   width: 30%;
@@ -199,17 +204,17 @@ nav a:hover {
   background-color: var(--nav-hover-background-color);
 }
 
-/* Footer (Brown & Green Gradient) */
 footer {
   background: linear-gradient(to bottom, var(--footer-brown) 50%, var(--footer-green) 50%);
   color: white;
-  padding: 25px 50px;
+  padding: 30px;
+  min-height: 120px; 
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
   text-align: center;
-  flex-direction: column;
 }
+
 
 footer p {
   font-size: 1.2em;
@@ -259,4 +264,3 @@ footer .social img {
     margin-top: 25px;
   }
 }
-
