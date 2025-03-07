@@ -3,118 +3,166 @@
 
 :root {
   /* Color Palette */
-  --primary-color: #073b3a;
-  --secondary-color: #0b6e4f;
-  --accent1-color: #08a045;
-  --accent2-color: white;
+  --primary-color: #144266;
+  --secondary-color: #78c4d7;
+  --accent1-color: #03763d;
+  --accent2-color: #ddfcad;
 
-  /* Fonts */
-  --heading-font: "Rock Salt", cursive;
-  --paragraph-font: "Montserrat", sans-serif;
+  /* change the values below to your chosen font(s) */
+  --heading-font: Palatino, Georgia, serif;
+  --paragraph-font: "Trebuchet MS", Arial, sans-serif;
 
-  /* Text & Background Colors */
-  --headline-color-on-white: #073b3a;
-  --headline-color-on-color: white;
-  --paragraph-color-on-white: #073b3a;
-  --paragraph-color-on-color: white;
-  --paragraph-background-color: #0b6e4f;
-  --nav-link-color: white;
-  --nav-background-color: #08a045;
-  --nav-hover-link-color: #08a045;
-  --nav-hover-background-color: #073b3a;
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: #144266; /* headlines on a white background */
+  --headline-color-on-color: white; /* headlines on a colored background */
+  --paragraph-color-on-white: #144266; /* paragraph text on a white background */
+  --paragraph-color-on-color: white; /* paragraph text on a colored background */
+  --paragraph-background-color: #144266;
+  --nav-link-color: #144266;
+  --nav-background-color: #78c4d7;
+  --nav-hover-link-color: #144266;
+  --nav-hover-background-color: #ddfcad;
 }
 
-/* General Styles */
+
 body {
   max-width: 960px;
   margin: 0 auto;
   padding: 4em;
   font-size: 18px;
   text-align: center;
-  font-family: var(--paragraph-font);
 }
-
-/* Images */
 img {
   display: block;
   margin: 0 auto;
   max-width: 300px;
 }
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--heading-font);
   color: var(--headline-color-on-white);
 }
-
 h2 {
   text-align: center;
 }
-
-/* Header */
+hr {
+  height: 3px;
+  margin: 35px 0;
+  background: var(--accent1-color);
+}
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 1em;
+  text-align: center;
+  color: var(--headline-color-on-color);
   background-color: var(--paragraph-background-color);
+}
+header > h1,
+header > h2 {
+  color: var(--headline-color-on-color);
+}
+p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
   padding: 1em;
 }
-
-#logo_link {
-  display: flex;
-  align-items: center;
+.colors {
+  width: 100%;
+  min-width: 350px;
+  margin: 30px auto;
+  text-align: center;
 }
-
-.logo {
-  width: 80px;
+.colors th {
+  background-color: #999;
 }
-
-/* Navigation */
+.colors td {
+  width: 25%;
+  height: 3em;
+}
+.primary {
+  background-color: var(--primary-color);
+}
+.secondary {
+  background-color: var(--secondary-color);
+}
+.accent1 {
+  background-color: var(--accent1-color);
+}
+.accent2 {
+  background-color: var(--accent2-color);
+}
+p.colored {
+  background-color: var(--paragraph-background-color);
+  color: var(--paragraph-color-on-color);
+}
 nav {
-  display: flex;
-  justify-content: space-around;
-  width: 60%;
   background-color: var(--nav-background-color);
   line-height: 3em;
+  text-align: center;
   font-size: 1.2em;
 }
-
+nav {
+  list-style-type: none;
+  display: flex;
+}
 nav a {
-  padding: 10px 20px;
+  padding: 1em;
+  min-width: 120px;
   text-decoration: none;
+  padding: 10px;
+}
+nav a:link,
+nav a:visited {
   color: var(--nav-link-color);
 }
-
 nav a:hover {
   color: var(--nav-hover-link-color);
   background-color: var(--nav-hover-background-color);
 }
+.sitemap {
+  display: grid;
+  justify-content: center;
 
-/* Footer */
-footer {
-  background-color: var(--secondary-color);
-  color: var(--accent2-color);
-  padding: 25px 50px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  grid-template-columns: repeat(6, 15%);
+  grid-template-rows: 3em 1.5em 1.5em 3em;
+  grid-template-areas:
+      ". . home home . ."
+      ". . . top . ."
+      ". left left right right ."
+      "page2 page2 . . page3 page3";
 }
-
-footer p {
-  font-size: 1.2em;
+.sitemap > div {
+  text-align: center;
 }
-
-footer a {
-  color: var(--accent2-color);
-  text-decoration: none;
+.sm-home {
+  grid-area: home;
+  background-color: #ccc;
+  line-height: 3em;
 }
-
-footer a:hover {
-  background-color: var(--accent1-color);
-  color: var(--nav-hover-background-color);
+.sm-page2 {
+  grid-area: page2;
+  background-color: #ccc;
+  line-height: 3em;
 }
-
-footer .social img {
-  width: 40px;
-  margin: 0 10px;
+.sm-page3 {
+  grid-area: page3;
+  background-color: #ccc;
+  line-height: 3em;
+}
+.top {
+  grid-area: top;
+  border-left: 1px solid;
+}
+.left {
+  grid-area: left;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+.right {
+  grid-area: right;
+  border-top: 1px solid;
+  border-right: 1px solid;
 }
