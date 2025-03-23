@@ -5,68 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | Conner's Fitness Training</title>
     <link rel="stylesheet" href="styles/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary-color: #073b3a;
+        --secondary-color: #0b6e4f;
+        --accent1-color: #08a045;
+        --accent2-color: white;
+      }
+      body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        background-color: var(--accent2-color);
+        color: var(--primary-color);
+      }
+      h1, h2, h3 {
+        font-family: 'Montserrat', sans-serif;
+      }
+      header, footer {
+        background-color: var(--primary-color);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+      }
+      nav a {
+        margin: 0 10px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .hero {
+        position: relative;
+        text-align: center;
+      }
+      #hero-img {
+        width: 100%;
+        height: auto;
+      }
+      .hero-text {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255,255,255,0.8);
+        padding: 10px 20px;
+        border-radius: 8px;
+      }
+      .welcome-section {
+        background-color: #eaeaea;
+        padding: 2rem;
+        text-align: center;
+      }
+      .content-section {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2rem;
+        gap: 2rem;
+        align-items: center;
+      }
+      .text-content {
+        flex: 2;
+        min-width: 300px;
+      }
+      .content-image {
+        flex: 1;
+        min-width: 200px;
+      }
+      .content-image img {
+        width: 100%;
+        border-radius: 8px;
+      }
+      .three-image-section {
+        display: flex;
+        justify-content: space-around;
+        padding: 2rem;
+        background-color: #eaeaea;
+      }
+      .three-image-section img {
+        width: 30%;
+        border-radius: 8px;
+      }
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
+      .bottom-nav {
+        margin-bottom: 1rem;
+      }
+      .social img {
+        width: 24px;
+        margin: 0 5px;
+      }
+    </style>
   </head>
   <body>
-    <!-- Header -->
     <header>
-      <div class="top-header">
-        <a id="logo_link" href="index.html">
-          <img class="logo" src="images/FitnessLogo.png" alt="Fitness Training Logo" />
-        </a>
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="workout-plans.html">Workout Plans</a>
-          <a href="nutrition-recovery.html">Nutrition & Recovery</a>
-        </nav>
-      </div>
+      <a id="logo_link" href="index.html">
+        <img class="logo" src="images/FitnessLogo.png" alt="Fitness Training Logo" style="height:50px;" />
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="workout-plans.html">Workout Plans</a>
+        <a href="nutrition-recovery.html">Nutrition & Recovery</a>
+      </nav>
     </header>
-    
-    <!-- Hero Section -->
-    <section id="hero">
+
+    <section class="hero">
       <img id="hero-img" src="images/home-fitness.jpg" alt="A person exercising at home" />
       <div class="hero-text">
         <h1>Conner's Fitness Training</h1>
       </div>
     </section>
 
-    <!-- Welcome Section -->
     <section class="welcome-section">
       <h2>Welcome to Conner's Fitness Training Site</h2>
     </section>
 
-    <!-- Fitness Training Content Section -->
     <section class="content-section">
       <div class="text-content">
         <h3>Fitness Training</h3>
-        <p>
-          Welcome to Fitness Training, your go-to resource for expert-backed fitness programs, 
-          workout guides, and nutrition advice. Whether you are looking to build muscle, improve 
-          endurance, lose weight, or simply stay active, we provide customized fitness plans that fit 
-          your lifestyle.
-        </p>
-        <p>
-          Staying consistent in your fitness journey requires the right knowledge, motivation, and structure. 
-          Our website is designed to eliminate the guesswork in fitness by offering clear, step-by-step 
-          workout guides and expert-backed training plans.
-        </p>
-        <p>
-          A well-rounded fitness journey is about more than just exercise. It’s about understanding 
-          the connection between physical training, nutrition, and mental discipline. Our platform 
-          takes a holistic approach to fitness, ensuring that you have access to all the tools and 
-          resources necessary for long-term success. 
-        </p>
-        <p>
-          Whether you have 30 minutes a day or a couple of hours, our structured programs will fit 
-          into your schedule. You can customize your training plan, track progress, and make 
-          adjustments along the way. Each workout is designed with flexibility in mind so that 
-          regardless of your fitness level or access to equipment, you can follow along and see results.
-        </p>
-        <p>
-          The journey to a healthier lifestyle does not have to be complicated. Our platform 
-          breaks down fitness into simple, achievable steps, allowing you to focus on your goals 
-          with confidence. Our goal is to help you stay motivated, eliminate confusion, and make 
-          fitness an enjoyable and sustainable part of your life.
-        </p>
+        <p>Welcome to Fitness Training, your go-to resource for expert-backed fitness programs, workout guides, and nutrition advice. Whether you are looking to build muscle, improve endurance, lose weight, or simply stay active, we provide customized fitness plans that fit your lifestyle.</p>
+        <p>Staying consistent in your fitness journey requires the right knowledge, motivation, and structure. Our website is designed to eliminate the guesswork in fitness by offering clear, step-by-step workout guides and expert-backed training plans.</p>
+        <p>A well-rounded fitness journey is about more than just exercise. It’s about understanding the connection between physical training, nutrition, and mental discipline. Our platform takes a holistic approach to fitness, ensuring that you have access to all the tools and resources necessary for long-term success.</p>
+        <p>Whether you have 30 minutes a day or a couple of hours, our structured programs will fit into your schedule. You can customize your training plan, track progress, and make adjustments along the way. Each workout is designed with flexibility in mind so that regardless of your fitness level or access to equipment, you can follow along and see results.</p>
+        <p>The journey to a healthier lifestyle does not have to be complicated. Our platform breaks down fitness into simple, achievable steps, allowing you to focus on your goals with confidence. Our goal is to help you stay motivated, eliminate confusion, and make fitness an enjoyable and sustainable part of your life.</p>
         <ul>
           <li>Structured workout routines for all fitness levels</li>
           <li>Expert advice on exercise techniques</li>
@@ -82,14 +146,12 @@
       </div>
     </section>
 
-    <!-- Three-Image Section -->
     <section class="three-image-section">
       <img src="images/home-fitness.jpg" alt="A person exercising at home">
       <img src="images/strength-training.jpg" alt="Person lifting weights">
       <img src="images/cardio-routine.jpg" alt="Person running on a treadmill">
     </section>
 
-    <!-- Footer -->
     <footer>
       <div class="bottom-nav">
         <a href="index.html">Home</a>
