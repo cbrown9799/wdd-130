@@ -6,6 +6,7 @@
     <title>Home | Conner's Fitness Training</title>
     <link rel="stylesheet" href="styles/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
       :root {
         --primary-color: #073b3a;
@@ -98,6 +99,72 @@
         width: 24px;
         margin: 0 5px;
       }
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin: 2rem auto;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        background-color: #ffffff;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .card img {
+        width: 100%;
+        height: auto;
+      }
+
+      .card h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        margin: 0.5rem 0 0;
+        color: #073b3a;
+      }
+
+      .title {
+        color: grey;
+        font-size: 16px;
+        margin: 0.2rem 0;
+      }
+
+      .card p {
+        margin: 0.5rem 0;
+        font-size: 14px;
+      }
+
+      .card .social-icons {
+        margin: 12px 0;
+      }
+
+      .card .social-icons a {
+        text-decoration: none;
+        font-size: 22px;
+        margin: 0 8px;
+        color: #08a045;
+      }
+
+      .card .social-icons a:hover {
+        opacity: 0.7;
+      }
+
+      .card button {
+        border: none;
+        outline: 0;
+        padding: 10px;
+        color: white;
+        background-color: #0b6e4f;
+        text-align: center;
+        cursor: pointer;
+        width: 80%;
+        font-size: 16px;
+        margin: 12px 0 20px;
+        border-radius: 6px;
+      }
+
+      .card button:hover {
+        background-color: #073b3a;
+      }
     </style>
   </head>
   <body>
@@ -151,6 +218,20 @@
       <img src="images/strength-training.jpg" alt="Person lifting weights">
       <img src="images/cardio-routine.jpg" alt="Person running on a treadmill">
     </section>
+
+    <!-- Profile Card Component -->
+    <div class="card">
+      <img src="images/fitness-trainer.JPG" alt="Conner Brown - Fitness Trainer" />
+      <h1>Conner Brown</h1>
+      <p class="title">Fitness Trainer</p>
+      <p>BYU–Idaho Graduate</p>
+      <div class="social-icons">
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+      </div>
+      <p><button>Contact</button></p>
+    </div>
 
     <footer>
       <div class="bottom-nav">
