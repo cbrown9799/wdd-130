@@ -5,37 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Workout Plans | Conner's Fitness Training</title>
     <link rel="stylesheet" href="styles/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary-color: #073b3a;
+        --secondary-color: #0b6e4f;
+        --accent1-color: #08a045;
+        --accent2-color: white;
+      }
+      body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        background-color: var(--accent2-color);
+        color: var(--primary-color);
+      }
+      h1, h2, h3, h4 {
+        font-family: 'Montserrat', sans-serif;
+      }
+      header {
+        background-color: var(--primary-color);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+      }
+      nav a {
+        margin: 0 10px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      #hero {
+        position: relative;
+        text-align: center;
+      }
+      #hero-img {
+        width: 100%;
+        height: auto;
+      }
+      .hero-text {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255,255,255,0.9);
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      .content-section {
+        padding: 2rem;
+        max-width: 1000px;
+        margin: auto;
+      }
+      .workout-plans-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 2rem;
+        background-color: #f0f0f0;
+      }
+      .workout-plan-box {
+        background-color: #e0e0e0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .workout-plan-box h4 {
+        background-color: white;
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+      }
+      .three-image-section {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 2rem;
+        background-color: #eaeaea;
+      }
+      .three-image-section img {
+        flex: 1;
+        max-width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      footer {
+        background-color: var(--primary-color);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+      }
+      .bottom-nav {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+      .bottom-nav a {
+        background-color: white;
+        color: var(--primary-color);
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .bottom-nav a:hover {
+        background-color: var(--accent1-color);
+        color: white;
+      }
+      .social {
+        display: flex;
+        gap: 10px;
+      }
+      .social img {
+        width: 24px;
+        height: 24px;
+      }
+    </style>
   </head>
   <body>
-    <!-- Header -->
     <header>
-      <div class="top-header">
-        <a id="logo_link" href="index.html">
-          <img class="logo" src="images/FitnessLogo.png" alt="Fitness Training Logo" />
-        </a>
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="workout-plans.html">Workout Plans</a>
-          <a href="nutrition-recovery.html">Nutrition & Recovery</a>
-        </nav>
-      </div>
+      <a id="logo_link" href="index.html">
+        <img class="logo" src="images/FitnessLogo.png" alt="Fitness Training Logo" style="height:50px;" />
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="workout-plans.html">Workout Plans</a>
+        <a href="nutrition-recovery.html">Nutrition & Recovery</a>
+      </nav>
     </header>
 
-    <!-- Hero Section -->
     <section id="hero">
       <img id="hero-img" src="images/strength-training.jpg" alt="Person lifting weights" />
       <div class="hero-text">
-        <h1>Workout Plans</h1>
+        Workout Plans
       </div>
     </section>
 
-    <!-- Workout Plans Section -->
     <main>
       <section class="content-section">
         <h3>Workout Plans</h3>
-        <p>
-          Our Workout Plans section provides detailed programs designed for various fitness goals. Whether you are a beginner or an advanced lifter, you will find a program that fits your needs.
-        </p>
+        <p>Our Workout Plans section provides detailed programs designed for various fitness goals. Whether you are a beginner or an advanced lifter, you will find a program that fits your needs.</p>
         <ul>
           <li><strong>Strength Training:</strong> Focus on resistance-based exercises to build muscle and increase endurance.</li>
           <li><strong>Endurance Workouts:</strong> Cardio-based routines that help improve stamina and cardiovascular health.</li>
@@ -45,18 +163,11 @@
           <li><strong>Full-Body Workouts:</strong> Sessions that target multiple muscle groups for maximum efficiency.</li>
           <li><strong>Split Training:</strong> Plans that focus on specific muscle groups each day for optimized muscle growth.</li>
         </ul>
-        <p>
-          Each of our workout programs comes with detailed explanations, video tutorials, and modifications based on fitness levels. Whether you prefer lifting weights, bodyweight exercises, or a mix of both, we offer something that caters to your specific goals.
-        </p>
-        <p>
-          For beginners, our introduction to strength training covers everything from basic movement patterns to proper form. This will ensure that you develop a strong foundation before progressing to heavier lifts or advanced movements.
-        </p>
-        <p>
-          If weight loss and endurance are your primary focus, our endurance-based programs incorporate running, cycling, jump rope routines, and bodyweight circuits designed to enhance cardiovascular performance while burning calories.
-        </p>
+        <p>Each of our workout programs comes with detailed explanations, video tutorials, and modifications based on fitness levels. Whether you prefer lifting weights, bodyweight exercises, or a mix of both, we offer something that caters to your specific goals.</p>
+        <p>For beginners, our introduction to strength training covers everything from basic movement patterns to proper form. This will ensure that you develop a strong foundation before progressing to heavier lifts or advanced movements.</p>
+        <p>If weight loss and endurance are your primary focus, our endurance-based programs incorporate running, cycling, jump rope routines, and bodyweight circuits designed to enhance cardiovascular performance while burning calories.</p>
       </section>
 
-      <!-- Workout Levels Section -->
       <section class="workout-plans-grid">
         <div class="workout-plan-box">
           <h4>Beginner Workout Plan</h4>
@@ -72,7 +183,6 @@
         </div>
       </section>
 
-      <!-- Workout Images -->
       <section class="three-image-section">
         <img src="images/strength-training.jpg" alt="Person lifting weights">
         <img src="images/cardio-routine.jpg" alt="Person running on a treadmill">
@@ -80,7 +190,6 @@
       </section>
     </main>
 
-    <!-- Footer -->
     <footer>
       <div class="bottom-nav">
         <a href="index.html">Home</a>
