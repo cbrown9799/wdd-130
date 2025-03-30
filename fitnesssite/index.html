@@ -4,26 +4,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | Conner's Fitness Training</title>
-    <link rel="stylesheet" href="styles/site-plan.css.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/site-plan.css" />
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <style>
-      :root {
-        --primary-color: #073b3a;
-        --secondary-color: #0b6e4f;
-        --accent1-color: #08a045;
-        --accent2-color: white;
-      }
-      body {
-        font-family: 'Roboto', sans-serif;
+      html, body {
         margin: 0;
+        padding: 0;
+        height: 100%;
+        box-sizing: border-box;
         background-color: var(--accent2-color);
-        color: var(--primary-color);
+        color: var(--paragraph-color-on-white);
+        font-family: var(--paragraph-font);
       }
-      h1, h2, h3 {
-        font-family: 'Montserrat', sans-serif;
-      }
-      header, footer {
+
+      header {
         background-color: var(--primary-color);
         color: white;
         display: flex;
@@ -31,123 +26,141 @@
         align-items: center;
         padding: 1rem;
       }
+
       nav a {
         margin: 0 10px;
         color: white;
         text-decoration: none;
         font-weight: bold;
+        font-family: var(--paragraph-font);
       }
+
       .hero {
         position: relative;
         text-align: center;
       }
+
       #hero-img {
         width: 100%;
-        height: auto;
+        height: 80vh;
+        object-fit: cover;
       }
+
       .hero-text {
         position: absolute;
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: rgba(255,255,255,0.8);
+        background-color: rgba(255,255,255,0.85);
         padding: 10px 20px;
         border-radius: 8px;
+        font-family: var(--heading-font);
       }
+
       .welcome-section {
         background-color: #eaeaea;
         padding: 2rem;
         text-align: center;
       }
+
       .content-section {
         display: flex;
         flex-wrap: wrap;
         padding: 2rem;
         gap: 2rem;
+        justify-content: center;
         align-items: center;
       }
+
       .text-content {
         flex: 2;
         min-width: 300px;
+        max-width: 600px;
+        font-family: var(--paragraph-font);
       }
+
       .content-image {
         flex: 1;
         min-width: 200px;
+        max-width: 300px;
       }
+
       .content-image img {
         width: 100%;
         border-radius: 8px;
       }
+
       .three-image-section {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         padding: 2rem;
         background-color: #eaeaea;
+        gap: 2rem;
+        flex-wrap: wrap;
       }
+
       .three-image-section img {
-        width: 30%;
+        width: 200px;
         height: 200px;
         object-fit: cover;
         border-radius: 8px;
       }
-      footer {
-        flex-direction: column;
-        text-align: center;
-      }
-      .bottom-nav {
-        margin-bottom: 1rem;
-      }
-      .social img {
-        width: 24px;
-        margin: 0 5px;
-      }
+
       .card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         max-width: 300px;
         margin: 2rem auto;
         text-align: center;
-        font-family: 'Roboto', sans-serif;
         background-color: #ffffff;
         border-radius: 10px;
         overflow: hidden;
       }
+
       .card img {
         width: 100%;
         height: auto;
       }
+
       .card h1 {
-        font-family: 'Montserrat', sans-serif;
+        font-family: var(--heading-font);
         font-size: 24px;
         margin: 0.5rem 0 0;
-        color: #073b3a;
+        color: var(--primary-color);
       }
+
       .title {
         color: grey;
         font-size: 16px;
         margin: 0.2rem 0;
       }
+
       .card p {
         margin: 0.5rem 0;
         font-size: 14px;
+        font-family: var(--paragraph-font);
       }
+
       .card .social-icons {
         margin: 12px 0;
       }
+
       .card .social-icons a {
         text-decoration: none;
         font-size: 22px;
         margin: 0 8px;
-        color: #08a045;
+        color: var(--accent1-color);
       }
+
       .card .social-icons a:hover {
         opacity: 0.7;
       }
+
       .card button {
         border: none;
         outline: 0;
         padding: 10px;
         color: white;
-        background-color: #0b6e4f;
+        background-color: var(--secondary-color);
         text-align: center;
         cursor: pointer;
         width: 80%;
@@ -155,15 +168,43 @@
         margin: 12px 0 20px;
         border-radius: 6px;
       }
+
       .card button:hover {
-        background-color: #073b3a;
+        background-color: var(--primary-color);
+      }
+
+      footer {
+        background-color: var(--primary-color);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      .bottom-nav {
+        margin-bottom: 1rem;
+      }
+
+      .bottom-nav a {
+        margin: 0 10px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: var(--paragraph-font);
+      }
+
+      .social img {
+        width: 24px;
+        margin: 0 5px;
       }
     </style>
   </head>
   <body>
     <header>
       <a id="logo_link" href="index.html">
-        <img class="logo" src="images/FitnessLogo.png" alt="Fitness Training Logo" style="height:50px;" />
+        <img class="logo" src="images/FitnessLogo.png" alt="Fitness Training Logo" style="height:50px" />
       </a>
       <nav>
         <a href="index.html">Home</a>
@@ -186,7 +227,11 @@
     <section class="content-section">
       <div class="text-content">
         <h3>Fitness Training</h3>
-        <p>Welcome to Fitness Training, your go-to resource for expert-backed fitness programs, workout guides, and nutrition advice...</p>
+        <p>Welcome to Fitness Training, your go-to resource for expert-backed fitness programs, workout guides, and nutrition advice. Whether you are looking to build muscle, improve endurance, lose weight, or simply stay active, we provide customized fitness plans that fit your lifestyle.</p>
+        <p>Staying consistent in your fitness journey requires the right knowledge, motivation, and structure. Our website is designed to eliminate the guesswork in fitness by offering clear, step-by-step workout guides and expert-backed training plans.</p>
+        <p>A well-rounded fitness journey is about more than just exercise. It’s about understanding the connection between physical training, nutrition, and mental discipline. Our platform takes a holistic approach to fitness, ensuring that you have access to all the tools and resources necessary for long-term success.</p>
+        <p>Whether you have 30 minutes a day or a couple of hours, our structured programs will fit into your schedule. You can customize your training plan, track progress, and make adjustments along the way. Each workout is designed with flexibility in mind so that regardless of your fitness level or access to equipment, you can follow along and see results.</p>
+        <p>The journey to a healthier lifestyle does not have to be complicated. Our platform breaks down fitness into simple, achievable steps, allowing you to focus on your goals with confidence. Our goal is to help you stay motivated, eliminate confusion, and make fitness an enjoyable and sustainable part of your life.</p>
         <ul>
           <li>Structured workout routines for all fitness levels</li>
           <li>Expert advice on exercise techniques</li>
@@ -208,7 +253,6 @@
       <img src="images/cardio-routine.jpg" alt="Person running on a treadmill">
     </section>
 
-    <!-- Profile Card Component -->
     <div class="card">
       <img src="images/fitness-trainer.JPG" alt="Conner Brown - Fitness Trainer" />
       <h1>Conner Brown</h1>
@@ -230,9 +274,9 @@
       </div>
       <p>&copy; 2025 Conner Brown | <a href="site-plan.html">Site Plan</a></p>
       <div class="social">
-        <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook icon" /></a>
-        <a href="https://twitter.com"><img src="images/twitter.png" alt="Twitter icon" /></a>
-        <a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram icon" /></a>
+        <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook icon"></a>
+        <a href="https://twitter.com"><img src="images/twitter.png" alt="Twitter icon"></a>
+        <a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram icon"></a>
       </div>
     </footer>
   </body>
