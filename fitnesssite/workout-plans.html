@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workout Plans | Conner's Fitness Training</title>
-    <link rel="stylesheet" href="styles/site-plan.css" />
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Lato&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="styles/site-plan.css">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
       html, body {
         margin: 0;
@@ -35,7 +35,7 @@
         font-family: var(--paragraph-font);
       }
 
-      .hero {
+      #hero {
         position: relative;
         text-align: center;
       }
@@ -55,48 +55,60 @@
         padding: 10px 20px;
         border-radius: 8px;
         font-family: var(--heading-font);
-      }
-
-      .welcome-section {
-        background-color: #eaeaea;
-        padding: 2rem;
-        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
       }
 
       .content-section {
-        display: flex;
-        flex-wrap: wrap;
         padding: 2rem;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      .content-section h2 {
+        text-align: center;
+        font-family: var(--heading-font);
+      }
+
+      .workout-plans-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2rem;
-        justify-content: center;
-        align-items: center;
+        padding: 2rem;
+        background-color: #f0f0f0;
       }
 
-      .text-content {
-        flex: 2;
-        min-width: 300px;
-        max-width: 700px;
-        font-family: var(--paragraph-font);
-      }
-
-      .content-image {
-        flex: 1;
-        min-width: 200px;
-        max-width: 300px;
-      }
-
-      .content-image img {
-        width: 100%;
+      .workout-plan-box {
+        background-color: #e0e0e0;
+        padding: 1.5rem;
         border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .workout-plan-box h4 {
+        background-color: white;
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+        font-family: var(--heading-font);
       }
 
       .three-image-section {
         display: flex;
         justify-content: center;
+        gap: 2rem;
         padding: 2rem;
         background-color: #eaeaea;
-        gap: 2rem;
         flex-wrap: wrap;
+      }
+
+      .three-image-section h2 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+        font-family: var(--heading-font);
       }
 
       .three-image-section img {
@@ -106,40 +118,14 @@
         border-radius: 8px;
       }
 
-      .workout-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        padding: 2rem;
-        justify-items: center;
-      }
-
-      .workout-box {
-        background-color: #ccc;
-        padding: 1.5rem;
-        border-radius: 8px;
-        text-align: center;
-        width: 90%;
-        max-width: 300px;
-      }
-
-      .workout-box h4 {
-        background-color: white;
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-        margin-bottom: 1rem;
-        display: inline-block;
-        font-family: var(--heading-font);
-      }
-
       footer {
         background-color: var(--primary-color);
         color: white;
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: center;
         padding: 1rem;
+        text-align: center;
       }
 
       .bottom-nav {
@@ -148,22 +134,34 @@
 
       .bottom-nav a {
         margin: 0 10px;
-        color: white;
+        background-color: white;
+        color: var(--primary-color);
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
         text-decoration: none;
         font-weight: bold;
-        font-family: var(--paragraph-font);
+      }
+
+      .bottom-nav a:hover {
+        background-color: var(--accent1-color);
+        color: white;
+      }
+
+      .social {
+        display: flex;
+        gap: 10px;
       }
 
       .social img {
         width: 24px;
-        margin: 0 5px;
+        height: 24px;
       }
     </style>
   </head>
   <body>
     <header>
       <a id="logo_link" href="index.html">
-        <img class="logo" src="images/FitnessLogo.png" alt="Fitness Training Logo" style="height:50px" />
+        <img class="logo" src="images/FitnessLogo.png" alt="Fitness Training Logo" style="height:50px">
       </a>
       <nav>
         <a href="index.html">Home</a>
@@ -172,54 +170,45 @@
       </nav>
     </header>
 
-    <section class="hero">
-      <img id="hero-img" src="images/strength-training.jpg" alt="Person lifting weights" />
-      <div class="hero-text">
-        <h1>Workout Plans</h1>
-      </div>
-    </section>
-
-    <section class="welcome-section">
-      <h2>Our Workout Plans</h2>
+    <section id="hero">
+      <img id="hero-img" src="images/strength-training.jpg" alt="Person lifting weights">
+      <div class="hero-text">Workout Plans</div>
     </section>
 
     <section class="content-section">
-      <div class="text-content">
-        <p>Our Workout Plans section provides detailed programs designed for various fitness goals. Whether you are a beginner or an advanced lifter, you will find a program that fits your needs.</p>
-        <ul>
-          <li><strong>Strength Training:</strong> Focus on resistance-based exercises to build muscle and increase endurance.</li>
-          <li><strong>Endurance Workouts:</strong> Cardio-based routines that help improve stamina and cardiovascular health.</li>
-          <li><strong>Flexibility & Mobility:</strong> Programs that emphasize stretching, yoga, and injury prevention.</li>
-          <li><strong>High-Intensity Interval Training (HIIT):</strong> Short, intense workouts designed to burn fat and increase metabolism.</li>
-          <li><strong>Home & Gym Workouts:</strong> Custom workouts tailored to your equipment availability.</li>
-          <li><strong>Full-Body Workouts:</strong> Sessions that target multiple muscle groups for maximum efficiency.</li>
-          <li><strong>Split Training:</strong> Plans that focus on specific muscle groups each day for optimized muscle growth.</li>
-        </ul>
-        <p>Each of our workout programs comes with detailed explanations, video tutorials, and modifications based on fitness levels. Whether you prefer lifting weights, bodyweight exercises, or a mix of both, we offer something that caters to your specific goals.</p>
-        <p>For beginners, our introduction to strength training covers everything from basic movement patterns to proper form. This will ensure that you develop a strong foundation before progressing to heavier lifts or advanced movements.</p>
-        <p>If weight loss and endurance are your primary focus, our endurance-based programs incorporate running, cycling, jump rope routines, and bodyweight circuits designed to enhance cardiovascular performance while burning calories.</p>
-      </div>
-      <div class="content-image">
-        <img src="images/cardio-routine.jpg" alt="Cardio workout example">
-      </div>
+      <h2>Workout Plans</h2>
+      <p>Our Workout Plans section provides detailed programs designed for various fitness goals. Whether you are a beginner or an advanced lifter, you will find a program that fits your needs.</p>
+      <ul>
+        <li><strong>Strength Training:</strong> Focus on resistance-based exercises to build muscle and increase endurance.</li>
+        <li><strong>Endurance Workouts:</strong> Cardio-based routines that help improve stamina and cardiovascular health.</li>
+        <li><strong>Flexibility & Mobility:</strong> Programs that emphasize stretching, yoga, and injury prevention.</li>
+        <li><strong>High-Intensity Interval Training (HIIT):</strong> Short, intense workouts designed to burn fat and increase metabolism.</li>
+        <li><strong>Home & Gym Workouts:</strong> Custom workouts tailored to your equipment availability.</li>
+        <li><strong>Full-Body Workouts:</strong> Sessions that target multiple muscle groups for maximum efficiency.</li>
+        <li><strong>Split Training:</strong> Plans that focus on specific muscle groups each day for optimized muscle growth.</li>
+      </ul>
+      <p>Each of our workout programs comes with detailed explanations, video tutorials, and modifications based on fitness levels. Whether you prefer lifting weights, bodyweight exercises, or a mix of both, we offer something that caters to your specific goals.</p>
+      <p>For beginners, our introduction to strength training covers everything from basic movement patterns to proper form. This will ensure that you develop a strong foundation before progressing to heavier lifts or advanced movements.</p>
+      <p>If weight loss and endurance are your primary focus, our endurance-based programs incorporate running, cycling, jump rope routines, and bodyweight circuits designed to enhance cardiovascular performance while burning calories.</p>
     </section>
 
-    <section class="workout-grid">
-      <div class="workout-box">
+    <section class="workout-plans-grid">
+      <div class="workout-plan-box">
         <h4>Beginner Workout Plan</h4>
         <p>Designed for those new to fitness, this plan includes full-body movements and foundational strength exercises to build a solid fitness base.</p>
       </div>
-      <div class="workout-box">
+      <div class="workout-plan-box">
         <h4>Intermediate Workout Plan</h4>
         <p>For those who have some experience, this plan introduces more resistance training, progressive overload, and cardiovascular endurance workouts.</p>
       </div>
-      <div class="workout-box">
+      <div class="workout-plan-box">
         <h4>Advanced Workout Plan</h4>
         <p>Built for experienced lifters and athletes, this plan focuses on muscle specialization, heavy lifting, HIIT, and advanced mobility work.</p>
       </div>
     </section>
 
     <section class="three-image-section">
+      <h2>Workout Plan Visuals</h2>
       <img src="images/strength-training.jpg" alt="Person lifting weights">
       <img src="images/cardio-routine.jpg" alt="Person running on a treadmill">
       <img src="images/fitness-motivation.jpg" alt="Motivational fitness quote">
