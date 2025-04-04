@@ -1,89 +1,212 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrition & Recovery | Conner's Fitness Training</title>
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/site-plan.css">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        box-sizing: border-box;
+        background-color: var(--accent2-color);
+        color: var(--paragraph-color-on-white);
+        font-family: var(--paragraph-font);
+      }
+
+      header {
+        background-color: var(--primary-color);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+      }
+
+      nav a {
+        margin: 0 10px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: var(--paragraph-font);
+      }
+
+      #hero {
+        position: relative;
+        text-align: center;
+      }
+
+      #hero-img {
+        width: 100%;
+        height: 80vh;
+        object-fit: cover;
+      }
+
+      .hero-text {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255,255,255,0.85);
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-family: var(--heading-font);
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .content-section {
+        padding: 2rem;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      .content-section h2 {
+        text-align: center;
+        font-family: var(--heading-font);
+      }
+
+      .nutrition-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 2rem;
+        background-color: #f0f0f0;
+      }
+
+      .nutrition-box {
+        background-color: #e0e0e0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-family: var(--paragraph-font);
+      }
+
+      .three-image-section {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        padding: 2rem;
+        background-color: #eaeaea;
+        flex-wrap: wrap;
+      }
+
+      .three-image-section h2 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+        font-family: var(--heading-font);
+      }
+
+      .three-image-section img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      footer {
+        background-color: var(--primary-color);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .bottom-nav {
+        margin-bottom: 1rem;
+      }
+
+      .bottom-nav a {
+        margin: 0 10px;
+        background-color: white;
+        color: var(--primary-color);
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .bottom-nav a:hover {
+        background-color: var(--accent1-color);
+        color: white;
+      }
+
+      .social {
+        display: flex;
+        gap: 10px;
+      }
+
+      .social img {
+        width: 24px;
+        height: 24px;
+      }
+    </style>
   </head>
   <body>
-    <!-- Header -->
     <header>
-      <div class="top-header">
-        <a id="logo_link" href="index.html">
-          <img class="logo" src="images/FitnessLogo.png" alt="Fitness Training Logo" />
-        </a>
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="workout-plans.html">Workout Plans</a>
-          <a href="nutrition-recovery.html">Nutrition & Recovery</a>
-        </nav>
-      </div>
+      <a id="logo_link" href="index.html">
+        <img class="logo" src="images/FitnessLogo.png" alt="Fitness Training Logo" style="height:50px">
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="workout-plans.html">Workout Plans</a>
+        <a href="nutrition-recovery.html">Nutrition & Recovery</a>
+      </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-      <img id="hero-img" src="images/healthy-meal.jpg" alt="A healthy meal for fitness" />
-      <div class="hero-text">
-        <h1>Nutrition and Recovery</h1>
+    <section id="hero" aria-label="Nutrition and Recovery Hero">
+      <img id="hero-img" src="images/healthy-meal.jpg" alt="A healthy meal for fitness">
+      <div class="hero-text">Nutrition and Recovery</div>
+    </section>
+
+    <section class="content-section">
+      <h2>Nutrition and Recovery</h2>
+      <p>Achieving fitness goals is not just about working out – proper nutrition and recovery play a crucial role. This section provides in-depth meal planning guides, hydration strategies, and supplementation recommendations.</p>
+      <ul>
+        <li>Meal plans tailored for muscle gain, fat loss, and maintenance.</li>
+        <li>Hydration and nutrient timing strategies to enhance performance.</li>
+        <li>Post-workout recovery techniques, including foam rolling and stretching routines.</li>
+        <li>Tips for optimizing sleep to maximize muscle growth and fat loss.</li>
+        <li>Supplement recommendations for improved energy, muscle recovery, and fat loss.</li>
+        <li>Balanced macronutrient strategies for optimal energy levels.</li>
+        <li>Essential vitamins and minerals required for peak performance.</li>
+      </ul>
+      <p>Proper nutrition fuels your workouts and helps you recover efficiently. We offer meal plans designed to suit different dietary preferences, whether you follow a high-protein diet, low-carb approach, or plant-based eating.</p>
+      <p>In addition to meal planning, we provide insight into hydration strategies. Many fitness enthusiasts underestimate the importance of water intake in optimizing performance and recovery. Our hydration tips ensure that you stay energized and avoid common dehydration-related setbacks.</p>
+      <p>Recovery is an essential aspect of training. If you don’t give your muscles time to rebuild, your progress will stall. We offer evidence-based techniques to accelerate recovery, including foam rolling, active stretching, and sleep optimization strategies.</p>
+      <p>For those who want to take their performance to the next level, we also dive into the world of supplementation. We provide unbiased recommendations on pre-workout formulas, post-workout recovery drinks, and protein sources to help you get the most out of your efforts.</p>
+    </section>
+
+    <section class="nutrition-grid">
+      <div class="nutrition-box">
+        <h4>Beginner Nutrition</h4>
+        <p>Basic meal planning with whole foods and easy-to-follow hydration strategies.</p>
+      </div>
+      <div class="nutrition-box">
+        <h4>Intermediate Nutrition</h4>
+        <p>Balanced macros and nutrient timing techniques to fuel workouts efficiently.</p>
+      </div>
+      <div class="nutrition-box">
+        <h4>Advanced Nutrition</h4>
+        <p>Optimization of protein intake, supplements, and recovery techniques for peak performance.</p>
       </div>
     </section>
 
-    <!-- Nutrition and Recovery Section -->
-    <main>
-      <section class="content-section">
-        <h3>Nutrition and Recovery</h3>
-        <p>
-          Achieving fitness goals is not just about working out – proper nutrition and recovery play a crucial role. This section provides in-depth meal planning guides, hydration strategies, and supplementation recommendations.
-        </p>
-        <ul>
-          <li>Meal plans tailored for muscle gain, fat loss, and maintenance.</li>
-          <li>Hydration and nutrient timing strategies to enhance performance.</li>
-          <li>Post-workout recovery techniques, including foam rolling and stretching routines.</li>
-          <li>Tips for optimizing sleep to maximize muscle growth and fat loss.</li>
-          <li>Supplement recommendations for improved energy, muscle recovery, and fat loss.</li>
-          <li>Balanced macronutrient strategies for optimal energy levels.</li>
-          <li>Essential vitamins and minerals required for peak performance.</li>
-        </ul>
-        <p>
-          Proper nutrition fuels your workouts and helps you recover efficiently. We offer meal plans designed to suit different dietary preferences, whether you follow a high-protein diet, low-carb approach, or plant-based eating.
-        </p>
-        <p>
-          In addition to meal planning, we provide insight into hydration strategies. Many fitness enthusiasts underestimate the importance of water intake in optimizing performance and recovery. Our hydration tips ensure that you stay energized and avoid common dehydration-related setbacks.
-        </p>
-        <p>
-          Recovery is an essential aspect of training. If you don’t give your muscles time to rebuild, your progress will stall. We offer evidence-based techniques to accelerate recovery, including foam rolling, active stretching, and sleep optimization strategies.
-        </p>
-        <p>
-          For those who want to take their performance to the next level, we also dive into the world of supplementation. We provide unbiased recommendations on pre-workout formulas, post-workout recovery drinks, and protein sources to help you get the most out of your efforts.
-        </p>
-      </section>
+    <section class="three-image-section">
+      <h2>Nutrition and Recovery Visuals</h2>
+      <img src="images/healthy-meal.jpg" alt="A well-balanced meal for fitness">
+      <img src="images/stretching.jpg" alt="Person stretching after a workout">
+      <img src="images/fitness-motivation.jpg" alt="Motivational fitness quote">
+    </section>
 
-      <!-- Nutrition Levels Section -->
-      <section class="nutrition-grid">
-        <div class="nutrition-box">
-          <h4>Beginner Nutrition</h4>
-          <p>Basic meal planning with whole foods and easy-to-follow hydration strategies.</p>
-        </div>
-        <div class="nutrition-box">
-          <h4>Intermediate Nutrition</h4>
-          <p>Balanced macros and nutrient timing techniques to fuel workouts efficiently.</p>
-        </div>
-        <div class="nutrition-box">
-          <h4>Advanced Nutrition</h4>
-          <p>Optimization of protein intake, supplements, and recovery techniques for peak performance.</p>
-        </div>
-      </section>
-
-      <!-- Nutrition Images -->
-      <section class="three-image-section">
-        <img src="images/healthy-meal.jpg" alt="A well-balanced meal for fitness">
-        <img src="images/stretching.jpg" alt="Person stretching after a workout">
-        <img src="images/fitness-motivation.jpg" alt="Motivational fitness quote">
-      </section>
-    </main>
-
-    <!-- Footer -->
     <footer>
       <div class="bottom-nav">
         <a href="index.html">Home</a>
@@ -92,9 +215,9 @@
       </div>
       <p>&copy; 2025 Conner Brown | <a href="site-plan.html">Site Plan</a></p>
       <div class="social">
-        <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook icon" /></a>
-        <a href="https://twitter.com"><img src="images/twitter.png" alt="Twitter icon" /></a>
-        <a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram icon" /></a>
+        <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook icon"></a>
+        <a href="https://twitter.com"><img src="images/twitter.png" alt="Twitter icon"></a>
+        <a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram icon"></a>
       </div>
     </footer>
   </body>
